@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <title>Azure</title>
+    <style>
+      img {
+        position: absolute;
+      }
+
+      body {
+        overflow: hidden;
+      }
+
+      .circle {
+        width: 150px;
+        height: 150px;
+        position: relative;
+        border-radius: 1000px;
+        z-index: -99;
+        display: block;
+        margin: auto;
+      }
+
+      .movecircle {
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        margin: auto;
+        border-radius: 50%;
+        display: block;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        background: #2d2d2d;
+      }
+
+      .cont {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        top: 0;
+        left: 0;
+      }
+
+      .cursorline {
+        margin: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        height: 1px;
+        width: 50%;
+        background: #2d2d2d;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      style="top: -100px; left: -100px;"
+      id="geed"
+      src="/static/you.png"
+      width="16px"
+    />
+    <div class="cursorline" style="display: none"></div>
+    <div class="cont">
+      <div class="circle" style="background: green"></div>
+    </div>
+
+    <div class="movecircle" style="background: #2d2d2d; display: none"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+    <script>
+      var users = {{data|safe}};
+      var you = "{{you}}";
+    </script>
+    <script src="/static/main.js"></script>
+  </body>
+</html>

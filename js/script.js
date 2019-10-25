@@ -1,3 +1,22 @@
+// clipboard.on('success', function(e) {
+//     console.log(e);
+// });
+window.onload = function() {
+    var clipboard = new ClipboardJS("#copyemail");
+
+    clipboard.on('success', function(e) {
+        $(".contact-button").addClass("copied-button")
+        // setTimeout(function() {$(".contact-button").removeClass("copied-button")}, 1000)
+    
+        e.clearSelection();
+    });
+}
+
+$(".contact-button").hover(function() {}, function() {
+    $(this).removeClass("copied-button")
+})
+
+
 document.addEventListener('scroll', function (event) {
     relscrol = ((document.body.scrollTop / 200) > 1 ? 1 : (document.body.scrollTop / 200))
     modscrol = (document.body.scrollTop - ($(".section2")[0].offsetTop - 1800)) / 2000;

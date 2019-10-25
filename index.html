@@ -1,8 +1,10 @@
 <html>
 <head>
     <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/contact.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
-    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet"> 
 </head>
 <body>
@@ -10,21 +12,30 @@
     <div id="code"></div>
     <div id="wave1"></div>
     <div id="wave2"></div>
-    <div id="jellyfish"></div>
 
 <!-- Foreground items -->
 
     <!-- Header -->
     <div class="row">
         <div class="col-12">
-            <div class="header front position-fixed">
-                <div class="mx-auto d-block">
-                    
-                </div>
-                <img class="mx-auto d-block" src="../lemontree.png" width="70px">
+            <div class="header position-fixed front">
+                <img class="mx-auto d-block position-relative" src="../lemontree.png" width="70px" style="pointer-events: none;">
             </div>
-            <svg class="float-right mr-3 mt-2" xmlns="http://www.w3.org/2000/svg" width="35.961" height="35.961" viewBox="0 0 45.961 45.961"><defs><style>.a{fill:#8186d5;}</style></defs><path class="a" d="M40.216,0H5.745A5.75,5.75,0,0,0,0,5.745V31.6a5.75,5.75,0,0,0,5.745,5.745h8.618v7.54a1.074,1.074,0,0,0,1.077,1.077,1.031,1.031,0,0,0,.637-.215l11.212-8.4H40.216A5.75,5.75,0,0,0,45.961,31.6V5.745A5.75,5.75,0,0,0,40.216,0Zm1.436,31.6a1.441,1.441,0,0,1-1.436,1.436H25.853L24.7,33.9,18.672,38.42V33.034H5.745A1.441,1.441,0,0,1,4.309,31.6V5.745A1.44,1.44,0,0,1,5.745,4.309H40.216a1.44,1.44,0,0,1,1.436,1.436Z"/></svg>
 
+            <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs>
+                    <symbol id="icon-paperplane" viewBox="0 0 1024 1024">
+                        <path class="path1" d="M1009.376 5.12c-5.312-3.424-11.36-5.12-17.376-5.12-6.176 0-12.384 1.76-17.76 5.376l-960 640c-9.888 6.56-15.328 18.112-14.048 29.952 1.216 11.808 8.896 22.016 19.936 26.368l250.368 100.192 117.728 206.016c5.632 9.888 16.096 16 27.424 16.128 0.128 0 0.224 0 0.352 0 11.232 0 21.664-5.952 27.424-15.552l66.464-110.816 310.24 124.064c3.808 1.536 7.808 2.272 11.872 2.272 5.44 0 10.816-1.376 15.68-4.128 8.448-4.736 14.24-13.056 15.872-22.624l160-960c2.080-12.576-3.488-25.184-14.176-32.128zM100.352 664.864l741.6-494.432-539.2 577.184c-2.848-1.696-5.376-3.936-8.512-5.184l-193.888-77.568zM326.048 770.112c-0.064-0.128-0.16-0.192-0.224-0.32l606.176-648.8-516.768 805.184-89.184-156.064zM806.944 947.488l-273.312-109.312c-6.496-2.56-13.248-3.424-19.936-3.808l420.864-652.416-127.616 765.536z"></path>
+                    </symbol>
+                </defs>
+            </svg>
+            
+            <span class="contact-button" id="copyemail" data-clipboard-text="hi@lemontree.dev">
+                Contact
+                <svg class="icon icon-paperplane"><use xlink:href="#icon-paperplane"></use></svg>
+                <span>hi@lemontree.dev</span>
+                <div class="rippleJS a"></div>
+            </span>
         </div>
     </div>
 
@@ -32,17 +43,46 @@
     <div class="fluid-container section1">
         <div class="row">
             <div class="col-12">
-                <p class="title m-0">LemonTree</p>
+                    <svg width="227" class="mx-auto title mb-3" id="title" height="38" viewBox="0 0 227 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="path-1-outside-1" maskUnits="userSpaceOnUse" x="0" y="0" width="227" height="38" fill="black">
+                            <rect fill="white" width="227" height="38"/>
+                            <path d="M29.83 31.624L26.058 26.196C23.804 28.174 21.642 28.634 18.192 28.634H10.28C12.166 27.576 13.408 25.598 13.408 22.884V12.902C13.408 10.556 14.972 8.854 17.088 8.854C19.204 8.854 20.722 10.326 20.722 12.488C20.722 14.144 19.71 15.432 18.376 16.306L23.482 20.492C25.966 18.836 27.944 15.34 27.944 11.982C27.944 5.68 23.482 2 17.272 2C10.51 2 6.094 6.6 6.094 12.902V23.298C6.094 26.334 4.852 28.128 2 28.542V35.166H18.698C23.758 35.166 26.656 34.752 29.83 31.624Z"/>
+                            <path d="M41.6628 29.876L50.3568 21.136C48.2408 17.824 45.6188 16.398 41.7088 16.398C36.5568 16.398 32.3708 20.86 32.3708 25.782C32.3708 32.13 37.3848 35.58 43.1348 35.58C44.7908 35.58 46.7688 35.258 48.1488 34.568V28.542C46.8148 29.554 45.0668 30.106 43.4108 30.106C42.8128 30.106 42.2148 30.014 41.6628 29.876ZM41.3868 21.734C41.9388 21.734 42.6748 21.872 43.1348 22.286L38.4428 27.116C38.2128 26.61 38.0748 26.012 38.0748 25.368C38.0748 23.574 39.2248 21.734 41.3868 21.734Z"/>
+                            <path d="M85.7261 34.292V29.278C85.2661 29.646 84.7601 29.83 84.1621 29.83C83.4261 29.83 82.7821 29.416 82.7821 28.496V22.746C82.7821 18.882 80.3901 16.398 76.5721 16.398C74.8241 16.398 72.3401 17.042 70.9141 19.112C69.8101 17.088 67.7861 16.398 65.8541 16.398C64.1061 16.398 62.3121 17.042 60.9781 18.698V16.812H54.4001V35.166H60.9781V24.08C61.2541 22.746 62.1741 21.826 63.3701 21.826C64.6121 21.826 65.3021 22.7 65.3021 23.988V35.166H71.8801V24.126C72.1561 22.792 73.0761 21.826 74.2721 21.826C75.5141 21.826 76.2041 22.7 76.2041 23.988V29.508C76.2041 33.234 78.4581 35.626 81.6321 35.626C83.1961 35.626 84.6221 35.212 85.7261 34.292Z"/>
+                            <path d="M98.3923 16.352C93.1023 16.352 88.7783 20.722 88.7783 26.012C88.7783 31.256 93.1023 35.626 98.3923 35.626C103.728 35.626 108.006 31.256 108.006 26.012C108.006 20.722 103.728 16.352 98.3923 16.352ZM98.3923 30.06C96.0923 30.06 94.4823 28.266 94.4823 26.012C94.4823 24.172 95.5863 22.47 97.3803 22.01C97.3343 22.194 97.3343 22.378 97.3343 22.608C97.3343 24.77 99.1283 26.472 101.244 26.472C101.704 26.472 102.118 26.38 102.532 26.242C102.394 28.358 100.6 30.06 98.3923 30.06Z"/>
+                            <path d="M132.048 29.83C131.312 29.83 130.668 29.416 130.668 28.496V22.746C130.668 19.02 128.414 16.398 124.642 16.398C122.894 16.398 121.1 17.042 119.766 18.698V16.812H113.188V35.166H119.766V24.08C120.042 22.746 120.962 21.826 122.158 21.826C123.4 21.826 124.09 22.7 124.09 23.988V29.508C124.09 33.234 126.298 35.626 129.518 35.626C131.036 35.626 132.416 35.212 133.612 34.292V29.278C133.152 29.646 132.646 29.83 132.048 29.83Z"/>
+                            <path d="M167.058 9.038V2.506H147.094C141.39 2.506 135.824 5.45 135.824 11.798C135.824 18.054 139.688 20.63 145.576 21.044L147.876 14.604C145.852 14.604 143.046 14.052 143.046 11.752C143.046 9.866 144.38 9.13 146.358 9.13H157.72C154.684 10.234 152.936 13.454 152.936 17.042V25.782C152.936 27.806 151.602 28.588 150.084 28.588C148.934 28.588 147.692 28.22 146.588 27.392V34.016C148.382 35.166 150.636 35.58 152.154 35.58C157.26 35.58 160.204 32.084 160.204 26.702V16.72C160.204 11.982 163.056 9.038 167.058 9.038Z"/>
+                            <path d="M178.212 16.398C176.372 16.398 174.716 17.502 173.658 19.342V16.812H167.08V35.166H173.658V25.966C173.796 24.724 174.164 23.712 175.084 22.976C175.774 24.034 176.924 24.678 178.35 24.678C180.374 24.678 182.214 22.976 182.214 20.492C182.214 18.1 180.466 16.398 178.212 16.398Z"/>
+                            <path d="M194.129 29.876L202.823 21.136C200.707 17.824 198.085 16.398 194.175 16.398C189.023 16.398 184.837 20.86 184.837 25.782C184.837 32.13 189.851 35.58 195.601 35.58C197.257 35.58 199.235 35.258 200.615 34.568V28.542C199.281 29.554 197.533 30.106 195.877 30.106C195.279 30.106 194.681 30.014 194.129 29.876ZM193.853 21.734C194.405 21.734 195.141 21.872 195.601 22.286L190.909 27.116C190.679 26.61 190.541 26.012 190.541 25.368C190.541 23.574 191.691 21.734 193.853 21.734Z"/>
+                            <path d="M215.101 29.876L223.795 21.136C221.679 17.824 219.057 16.398 215.147 16.398C209.995 16.398 205.809 20.86 205.809 25.782C205.809 32.13 210.823 35.58 216.573 35.58C218.229 35.58 220.207 35.258 221.587 34.568V28.542C220.253 29.554 218.505 30.106 216.849 30.106C216.251 30.106 215.653 30.014 215.101 29.876ZM214.825 21.734C215.377 21.734 216.113 21.872 216.573 22.286L211.881 27.116C211.651 26.61 211.513 26.012 211.513 25.368C211.513 23.574 212.663 21.734 214.825 21.734Z"/>
+                            </mask>
+
+
+                            <path class="letter" d="M29.83 31.624L26.058 26.196C23.804 28.174 21.642 28.634 18.192 28.634H10.28C12.166 27.576 13.408 25.598 13.408 22.884V12.902C13.408 10.556 14.972 8.854 17.088 8.854C19.204 8.854 20.722 10.326 20.722 12.488C20.722 14.144 19.71 15.432 18.376 16.306L23.482 20.492C25.966 18.836 27.944 15.34 27.944 11.982C27.944 5.68 23.482 2 17.272 2C10.51 2 6.094 6.6 6.094 12.902V23.298C6.094 26.334 4.852 28.128 2 28.542V35.166H18.698C23.758 35.166 26.656 34.752 29.83 31.624Z" stroke="white" stroke-width="4" mask="url(#path-1-outside-1)"/>
+                            <path class="letter" d="M41.6628 29.876L50.3568 21.136C48.2408 17.824 45.6188 16.398 41.7088 16.398C36.5568 16.398 32.3708 20.86 32.3708 25.782C32.3708 32.13 37.3848 35.58 43.1348 35.58C44.7908 35.58 46.7688 35.258 48.1488 34.568V28.542C46.8148 29.554 45.0668 30.106 43.4108 30.106C42.8128 30.106 42.2148 30.014 41.6628 29.876ZM41.3868 21.734C41.9388 21.734 42.6748 21.872 43.1348 22.286L38.4428 27.116C38.2128 26.61 38.0748 26.012 38.0748 25.368C38.0748 23.574 39.2248 21.734 41.3868 21.734Z" stroke="white" stroke-width="4" mask="url(#path-1-outside-1)"/>
+                            <path class="letter" d="M85.7261 34.292V29.278C85.2661 29.646 84.7601 29.83 84.1621 29.83C83.4261 29.83 82.7821 29.416 82.7821 28.496V22.746C82.7821 18.882 80.3901 16.398 76.5721 16.398C74.8241 16.398 72.3401 17.042 70.9141 19.112C69.8101 17.088 67.7861 16.398 65.8541 16.398C64.1061 16.398 62.3121 17.042 60.9781 18.698V16.812H54.4001V35.166H60.9781V24.08C61.2541 22.746 62.1741 21.826 63.3701 21.826C64.6121 21.826 65.3021 22.7 65.3021 23.988V35.166H71.8801V24.126C72.1561 22.792 73.0761 21.826 74.2721 21.826C75.5141 21.826 76.2041 22.7 76.2041 23.988V29.508C76.2041 33.234 78.4581 35.626 81.6321 35.626C83.1961 35.626 84.6221 35.212 85.7261 34.292Z" stroke="white" stroke-width="4" mask="url(#path-1-outside-1)"/>
+                            <path class="letter" d="M98.3923 16.352C93.1023 16.352 88.7783 20.722 88.7783 26.012C88.7783 31.256 93.1023 35.626 98.3923 35.626C103.728 35.626 108.006 31.256 108.006 26.012C108.006 20.722 103.728 16.352 98.3923 16.352ZM98.3923 30.06C96.0923 30.06 94.4823 28.266 94.4823 26.012C94.4823 24.172 95.5863 22.47 97.3803 22.01C97.3343 22.194 97.3343 22.378 97.3343 22.608C97.3343 24.77 99.1283 26.472 101.244 26.472C101.704 26.472 102.118 26.38 102.532 26.242C102.394 28.358 100.6 30.06 98.3923 30.06Z" stroke="white" stroke-width="4" mask="url(#path-1-outside-1)"/>
+                            <path class="letter" d="M132.048 29.83C131.312 29.83 130.668 29.416 130.668 28.496V22.746C130.668 19.02 128.414 16.398 124.642 16.398C122.894 16.398 121.1 17.042 119.766 18.698V16.812H113.188V35.166H119.766V24.08C120.042 22.746 120.962 21.826 122.158 21.826C123.4 21.826 124.09 22.7 124.09 23.988V29.508C124.09 33.234 126.298 35.626 129.518 35.626C131.036 35.626 132.416 35.212 133.612 34.292V29.278C133.152 29.646 132.646 29.83 132.048 29.83Z" stroke="white" stroke-width="4" mask="url(#path-1-outside-1)"/>
+                            <path class="letter" d="M167.058 9.038V2.506H147.094C141.39 2.506 135.824 5.45 135.824 11.798C135.824 18.054 139.688 20.63 145.576 21.044L147.876 14.604C145.852 14.604 143.046 14.052 143.046 11.752C143.046 9.866 144.38 9.13 146.358 9.13H157.72C154.684 10.234 152.936 13.454 152.936 17.042V25.782C152.936 27.806 151.602 28.588 150.084 28.588C148.934 28.588 147.692 28.22 146.588 27.392V34.016C148.382 35.166 150.636 35.58 152.154 35.58C157.26 35.58 160.204 32.084 160.204 26.702V16.72C160.204 11.982 163.056 9.038 167.058 9.038Z" stroke="white" stroke-width="4" mask="url(#path-1-outside-1)"/>
+                            <path class="letter" d="M178.212 16.398C176.372 16.398 174.716 17.502 173.658 19.342V16.812H167.08V35.166H173.658V25.966C173.796 24.724 174.164 23.712 175.084 22.976C175.774 24.034 176.924 24.678 178.35 24.678C180.374 24.678 182.214 22.976 182.214 20.492C182.214 18.1 180.466 16.398 178.212 16.398Z" stroke="white" stroke-width="4" mask="url(#path-1-outside-1)"/>
+                            <path class="letter" d="M194.129 29.876L202.823 21.136C200.707 17.824 198.085 16.398 194.175 16.398C189.023 16.398 184.837 20.86 184.837 25.782C184.837 32.13 189.851 35.58 195.601 35.58C197.257 35.58 199.235 35.258 200.615 34.568V28.542C199.281 29.554 197.533 30.106 195.877 30.106C195.279 30.106 194.681 30.014 194.129 29.876ZM193.853 21.734C194.405 21.734 195.141 21.872 195.601 22.286L190.909 27.116C190.679 26.61 190.541 26.012 190.541 25.368C190.541 23.574 191.691 21.734 193.853 21.734Z" stroke="white" stroke-width="4" mask="url(#path-1-outside-1)"/>
+                            <path class="letter" d="M215.101 29.876L223.795 21.136C221.679 17.824 219.057 16.398 215.147 16.398C209.995 16.398 205.809 20.86 205.809 25.782C205.809 32.13 210.823 35.58 216.573 35.58C218.229 35.58 220.207 35.258 221.587 34.568V28.542C220.253 29.554 218.505 30.106 216.849 30.106C216.251 30.106 215.653 30.014 215.101 29.876ZM214.825 21.734C215.377 21.734 216.113 21.872 216.573 22.286L211.881 27.116C211.651 26.61 211.513 26.012 211.513 25.368C211.513 23.574 212.663 21.734 214.825 21.734Z" stroke="white" stroke-width="4" mask="url(#path-1-outside-1)"/>
+                    </svg>
+                            
+                        
+                      
+                <!-- <p class="title m-0">LemonTree</p> -->
             </div>
         </div>
         <div class="row">
-            <div class="col-12 mb-4">
+            <div class="col-12 mb-5">
                 <p class="subtitle">Fullstack Developer</p>
             </div>
         </div>
         <div class="row">
             <div class="col-3 col-md-1 col-sm-2 col-xs-6 seework mx-auto mt-5 card">
                 <i class="fas fa-chevron-down"><span>Portfolio</span></i>
+                <div class="rippleJS b"></div>
             </div>
         </div>
         
@@ -51,15 +91,76 @@
 
     <!-- Second section (Portfolio items) -->
     <div class="fluid-container section2">
-    
+        <div id="jellyfish"></div>
+        <div class="row justify-content-center front firstset">
+            <div class="col-3">
+                <div class="card m-2 position-relative">
+                    <img class="card-img-top" src="neiljs.png" alt="threejs game image">
+                    <div class="card-body">
+                        <h4 class="card-title">THREE.js game</h4>
+
+                        <p class="card-text">This is a game I made back in 2018 in THREE.js using Cannon.js for physics. You will need a snappy computer to run this program so beware.</p>
+                    
+                        <a href="/work/neil/index.html" class="btn btn-secondary stretched-link">Open</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-3">
+                <div class="card m-2 position-relative">
+                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" height="225px" alt="threejs game image">
+                    <div class="card-body">
+                        <h4 class="card-title">City</h4>
+
+                        <p class="card-text">It's a city</p>
+                    
+                        <a href="/work/neil/index.html" class="btn btn-secondary stretched-link">Open</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card m-2 position-relative">
+                    <img class="card-img-top" src="neiljs.png" alt="threejs game image">
+                    <div class="card-body">
+                        <h4 class="card-title">THREE.js game</h4>
+
+                        <p class="card-text">This is a game I made back in 2018 in THREE.js using Cannon.js for physics. You will need a snappy computer to run this program so beware.</p>
+                    
+                        <a href="/work/neil/index.html" class="btn btn-secondary stretched-link">Open</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center front">
+            <div class="col-3">
+                <div class="card m-5">
+                    This
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card m-5">
+                    This
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card m-5">
+                    This
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-3"></div>
+            <div class="col-3"></div>
+        </div>
     </div>
 
 
-
+    <script async src="https://cdn.jsdelivr.net/npm/vanilla-ripplejs@1.0.6" integrity="sha384-OlarGErerEgz/M7123pQTTek4pUIiR6t0BK09bTmWDi2cZYbv3VHrriaXDnA0Oup" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

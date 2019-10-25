@@ -1,0 +1,106 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,500,700);
+
+$color1: #EE283E;
+$color2: #1c1e2b;
+$color3: white;
+$enable-gradients: true;
+
+.rippleJS.a .ripple {
+    background: $color1;
+}
+
+.rippleJS.b .ripple {
+    background: $color3;
+}
+
+.icon {
+	width: 1em;
+	height: 1em;
+	fill: currentColor;
+}
+
+.icon-paperplane {
+    font-size: 1em;
+    color: $color3;
+    margin-left: 1px;
+    margin-top: 0px;
+}
+
+.contact-button {
+    top: 17px;
+    cursor: pointer;
+    right: 25px;
+    position: relative;
+    float: right;
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 0.8em;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    padding: 11px 30px 11px 35px;
+    transition: 0.3s ease-in-out;
+    
+    span {
+        text-transform: none;
+        position: absolute;
+        color: $color1;
+        top: 11px;
+        left: 17px;
+        opacity: 0;
+        transition: all 0s ease 0s;
+    }
+    &:hover {
+        transition: 0.3s ease-in-out;
+        border: 2px solid $color3;
+        border-radius: 50px;
+        color: white;
+        background-color: $color3;
+        
+        &>span {
+            opacity: 1;
+            transition: all 0.25s ease-in-out 0.1s;
+        }
+        
+        &:before {
+            transition: 0.3s ease-in-out;
+            background-color: $color1;
+        }
+    }
+
+    &:before, &:after {
+        content: "";
+        position: absolute;
+        top: -6px;
+        left: -12px;
+        width: 57px;
+        height: 19px;
+    }
+    &:before {
+        border: 2px solid $color1;
+        background-color: $color2;
+        transform: skew(-25deg);
+        transition: 0.3s ease-in-out;
+    }
+    
+    &:after {
+        content: "Copy";
+        font-size: 0.75em;
+        top: -3px;
+        left: 3px;
+        color: $color3;
+    }
+    
+}
+
+.copied-button {
+    &:after {
+        content: "Copied!";
+        left: -2px;
+    }
+}
