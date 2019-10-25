@@ -1,0 +1,163 @@
+body {
+    background: #1C1E2B !important;
+    overflow-x: hidden;
+    height: 3000px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#code {
+    top: -46px;
+    left: 10px;
+    width: 604px;
+    height: 100vh;
+
+
+    background: transparent url('../codeimage.png') 0% 0% no-repeat padding-box;
+    background-size: contain;
+    position: absolute;
+}
+
+.header {
+    width: 100%;
+    height: 50px;
+    background: rgba(255, 255, 255, 0);
+    // box-shadow: 0px 10px 14px rgba(0, 0, 0, 0);
+
+
+    img {
+        position: relative;
+        cursor: pointer;
+        top: -97px;
+        transition: 0.4s;
+    }
+
+    img:hover {
+        top: -50px;
+    }
+
+    div {
+        border-radius: 50%;
+        width: 135px;
+        height: 100px;
+        background: rgba(255, 255, 255, 0);
+        top: -20px;
+        position: relative;
+        clip-path: inset(70px 0px 0px 0px);
+    }
+}
+
+#wave1 {
+    top: 700px;
+    left: -38.666648864746094px;
+    width: 3035px;
+    height: 117px;
+    position: absolute;
+    background: transparent url('../wave.png');
+    background-size: 2277px 117px;
+    background-repeat: no-repeat;
+}
+
+#wave2 {
+    top: 700px;
+    left: -357px;
+    width: 2277px;
+    height: 117px;
+    position: absolute;
+    background: transparent url('../wave.png');
+    background-size: 2277px 117px;
+    background-repeat: no-repeat;
+
+}
+
+.section2 {
+    height: 2000px;
+    position: absolute;
+    width: 100%;
+    top: 774px;
+    background: transparent linear-gradient(180deg, #090a0e 0%, #000000 11%, #000000 100%);
+}
+
+
+.section1 {
+   top: 180px;
+   position: relative;
+}
+
+.front {
+    z-index: 99999;
+}
+
+.title {
+    font-family: 'Josefin Sans';
+    font-size: 45px;
+    text-align: center;
+    color: #dddc9f;
+    letter-spacing: -1px;
+    line-height: 45px;
+}
+
+.subtitle {
+    font-family: 'Roboto';
+    font-size: 20px;
+    text-align: center;
+    color: #8186D5;
+}
+
+.seework {
+    background: transparent linear-gradient(112deg, #7195F5 0%, #C397F4 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 5px #000000B8;
+    border: 1px solid #707070;
+    border-radius: 13px;
+    height: 42px;
+    cursor: pointer;
+    display: flex;
+
+    &:hover i {
+        transform: translate(33px, 0px);
+    }
+
+    &:hover i span {
+        width: 56px;
+        right: 24px;
+    }
+
+    i {
+        margin: auto;
+        text-align: center;
+        align-items: center;
+        align-self: center;
+        transition: .4s;
+        color: #FEB57E;
+
+        span {
+            overflow: hidden;
+            width: 0.1px;
+            transition: .4s;
+            white-space: nowrap;
+            font-size: 15px;
+            right: 16px;
+            align-items: center;
+            align-self: center;
+            position: absolute;
+            font-family: 'Roboto';
+            font-weight: 300;
+            color: #FEB57E;
+            user-select: none;
+        }
+    }
+}
+
+#jellyfish {
+    top: 1140px;
+    right: 0;
+    width: 1144.16667px;
+    height: 828.333333px;
+    background: transparent url('../jellyfish.png');
+    opacity: 0.3;
+    background-size: cover;
+    position: absolute;
+    z-index: 999;
+}

@@ -1,0 +1,16 @@
+Creation process:
+
+Create THREE.js puzzle game first because that's the most fun part
+
+Create design (not interactivity) of website with information of mine like what I do, my previous projects and general about me.
+
+Take screenshot of website and turn that into puzzle pieces you must put together so it becomes the page
+
+find and add sound effects to everything
+
+add interactivity to website
+
+
+Experience:
+
+First you're meeted with a puzzle game to put together the different pieces to make an image. Once you complete the image it's in image of the webpage which it then zooms into and becomes the webpage.
