@@ -1,7 +1,7 @@
 // clipboard.on('success', function(e) {
 //     console.log(e);
 // });
-window.onload = function() {
+$(document).ready(function() {
     var clipboard = new ClipboardJS("#copyemail");
 
     clipboard.on('success', function(e) {
@@ -10,7 +10,15 @@ window.onload = function() {
     
         e.clearSelection();
     });
-}
+
+    $(".section2").css("top", $("#wave1")[0].offsetTop + 110)
+
+
+    $('<img/>').attr('src', '../codeimage.png').on('load', function() {
+        $(this).remove();
+        $('#code').css('background-image', 'url("../codeimage.png")').addClass("vis");
+    });
+});
 
 $(".contact-button").hover(function() {}, function() {
     $(this).removeClass("copied-button")

@@ -2,31 +2,35 @@ body {
     background: #1C1E2B !important;
     overflow-x: hidden;
     height: 3000px;
+    width: 100vw;
 }
+
+@media (max-width: 600px) {
+    .header img {
+      margin: 0 10px !important;
+    }
+  }
 
 html {
     scroll-behavior: smooth;
 }
 
-@keyframes code {
-    to {
-        top: -46px;
-        opacity: 1;
-    }
+.vis {
+    opacity: 1 !important;
 }
 
 #code {
-    // top: -250px;
-    // opacity: 0;
+    opacity: 0;
     top: -46px;
     left: 10px;
     width: 604px;
     height: 105vh;
-    // animation: code 1s ease-out forwards;
+    transition: opacity 1s ease-out;
 
 
-    background: transparent url('../codeimage.png') 0% 0% no-repeat padding-box;
+    // background: transparent url('../codeimage.png') 0% 0% no-repeat padding-box;
     background-size: contain;
+    background-repeat: no-repeat;
     position: absolute;
 }
 
@@ -141,7 +145,7 @@ html {
     }
 
     &:hover i span {
-        width: 56px;
+        width: 57px;
         right: 24px;
     }
 

@@ -1,1 +1,114 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,500,700);.rippleJS.a .ripple{background:#EE283E}.rippleJS.b .ripple{background:#fff}.icon{width:1em;height:1em;fill:currentColor}.icon-paperplane{font-size:1em;color:#fff;margin-left:1px;margin-top:0px}.contact-button{top:17px;cursor:pointer;right:25px;position:relative;float:right;-webkit-perspective:1000;-webkit-backface-visibility:hidden;-webkit-transform:translate3d(0, 0, 0);color:#fff;text-decoration:none;text-transform:uppercase;font-family:'Raleway', sans-serif;font-weight:500;font-size:0.8em;border:2px solid #fff;border-radius:4px;padding:11px 30px 11px 35px;transition:0.3s ease-in-out}.contact-button span{text-transform:none;position:absolute;color:#EE283E;top:11px;left:17px;opacity:0;transition:all 0s ease 0s}.contact-button:hover{transition:0.3s ease-in-out;border:2px solid #fff;border-radius:50px;color:white;background-color:#fff}.contact-button:hover>span{opacity:1;transition:all 0.25s ease-in-out 0.1s}.contact-button:hover:before{transition:0.3s ease-in-out;background-color:#EE283E}.contact-button:before,.contact-button:after{content:"";position:absolute;top:-6px;left:-12px;width:57px;height:19px}.contact-button:before{border:2px solid #EE283E;background-color:#1c1e2b;transform:skew(-25deg);transition:0.3s ease-in-out}.contact-button:after{content:"Copy";font-size:0.75em;top:-3px;left:3px;color:#fff}.copied-button:after{content:"Copied!";left:-2px}
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,500,700);
+/* line 8, ../../Sync/Portfolio/scss/contact.scss */
+.rippleJS.a .ripple {
+  background: #EE283E;
+}
+
+/* line 12, ../../Sync/Portfolio/scss/contact.scss */
+.rippleJS.b .ripple {
+  background: white;
+}
+
+/* line 16, ../../Sync/Portfolio/scss/contact.scss */
+.icon {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
+/* line 22, ../../Sync/Portfolio/scss/contact.scss */
+.icon-paperplane {
+  font-size: 1em;
+  color: white;
+  margin-left: 1px;
+  margin-top: 0px;
+}
+
+/* line 29, ../../Sync/Portfolio/scss/contact.scss */
+.contact-button {
+  top: 17px;
+  cursor: pointer;
+  right: 25px;
+  position: relative;
+  float: right;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 0.8em;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  padding: 11px 30px 11px 35px;
+  transition: 0.3s ease-in-out;
+}
+
+/* line 49, ../../Sync/Portfolio/scss/contact.scss */
+.contact-button span {
+  text-transform: none;
+  position: absolute;
+  color: #EE283E;
+  top: 11px;
+  left: 17px;
+  opacity: 0;
+  transition: all 0s ease 0s;
+}
+
+/* line 58, ../../Sync/Portfolio/scss/contact.scss */
+.contact-button:hover {
+  transition: 0.3s ease-in-out;
+  border: 2px solid white;
+  border-radius: 50px;
+  color: white;
+  background-color: white;
+}
+
+/* line 65, ../../Sync/Portfolio/scss/contact.scss */
+.contact-button:hover > span {
+  opacity: 1;
+  transition: all 0.25s ease-in-out 0.1s;
+}
+
+/* line 70, ../../Sync/Portfolio/scss/contact.scss */
+.contact-button:hover:before {
+  transition: 0.3s ease-in-out;
+  background-color: #EE283E;
+}
+
+/* line 76, ../../Sync/Portfolio/scss/contact.scss */
+.contact-button:before, .contact-button:after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -12px;
+  width: 57px;
+  height: 19px;
+}
+
+/* line 84, ../../Sync/Portfolio/scss/contact.scss */
+.contact-button:before {
+  border: 2px solid #EE283E;
+  background-color: #1c1e2b;
+  transform: skew(-25deg);
+  transition: 0.3s ease-in-out;
+}
+
+/* line 91, ../../Sync/Portfolio/scss/contact.scss */
+.contact-button:after {
+  content: "Copy";
+  font-size: 0.75em;
+  top: -3px;
+  left: 3px;
+  color: white;
+}
+
+/* line 102, ../../Sync/Portfolio/scss/contact.scss */
+.copied-button:after {
+  content: "Copied!";
+  left: -2px;
+}
+
+/*# sourceMappingURL=contact.css.map */
