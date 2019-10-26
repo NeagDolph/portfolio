@@ -11,7 +11,7 @@ $(document).ready(function() {
         e.clearSelection();
     });
 
-    $(".section2").css("top", $("#wave1")[0].offsetTop + 110)
+    $(".section2").css("top", $(".wavecont")[0].offsetTop + $(".wavecont").outerHeight() - 10)
 
 
     $('<img/>').attr('src', '../codeimage.png').on('load', function() {

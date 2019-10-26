@@ -54,12 +54,21 @@ html {
     }
 }
 
-#wave1 {
+.wavecont {
+    width: 100vw;
+    height: 117px;
+    overflow: hidden;
+    position: absolute;
     top: 83vh;
+    left: 0;
+}
+
+#wave1 {
+    // top: 83vh;
     left: -38.666648864746094px;
     width: 3035px;
     height: 117px;
-    position: absolute;
+    position: relative;
     background: transparent url('../wave.png');
     background-size: 2277px 117px;
     background-repeat: no-repeat;
@@ -67,11 +76,12 @@ html {
 }
 
 #wave2 {
-    top: 83vh;
+    // top: 83vh;
     left: -357px;
     width: 2277px;
     height: 117px;
-    position: absolute;
+    position: relative;
+    transform: translate(0, -100%);
     background: transparent url('../wave.png');
     background-size: 2277px 117px;
     background-repeat: no-repeat;

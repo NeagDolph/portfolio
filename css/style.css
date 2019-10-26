@@ -58,32 +58,41 @@ html {
 }
 
 /* line 57, ../../Sync/Portfolio/scss/style.scss */
-#wave1 {
+.wavecont {
+  width: 100vw;
+  height: 117px;
+  overflow: hidden;
+  position: absolute;
   top: 83vh;
+  left: 0;
+}
+
+/* line 66, ../../Sync/Portfolio/scss/style.scss */
+#wave1 {
   left: -38.666648864746094px;
   width: 3035px;
   height: 117px;
-  position: absolute;
+  position: relative;
   background: transparent url("../wave.png");
   background-size: 2277px 117px;
   background-repeat: no-repeat;
   z-index: -1;
 }
 
-/* line 69, ../../Sync/Portfolio/scss/style.scss */
+/* line 78, ../../Sync/Portfolio/scss/style.scss */
 #wave2 {
-  top: 83vh;
   left: -357px;
   width: 2277px;
   height: 117px;
-  position: absolute;
+  position: relative;
+  transform: translate(0, -100%);
   background: transparent url("../wave.png");
   background-size: 2277px 117px;
   background-repeat: no-repeat;
   z-index: -1;
 }
 
-/* line 82, ../../Sync/Portfolio/scss/style.scss */
+/* line 92, ../../Sync/Portfolio/scss/style.scss */
 .section2 {
   height: 2000px;
   position: absolute;
@@ -92,28 +101,28 @@ html {
   background: transparent linear-gradient(180deg, #090a0e 0%, #000000 11%, #000000 100%);
 }
 
-/* line 93, ../../Sync/Portfolio/scss/style.scss */
+/* line 103, ../../Sync/Portfolio/scss/style.scss */
 .section2 .firstset {
   margin-top: 300px;
 }
 
-/* line 98, ../../Sync/Portfolio/scss/style.scss */
+/* line 108, ../../Sync/Portfolio/scss/style.scss */
 .card {
   border: none !important;
 }
 
-/* line 103, ../../Sync/Portfolio/scss/style.scss */
+/* line 113, ../../Sync/Portfolio/scss/style.scss */
 .section1 {
   top: 180px;
   position: relative;
 }
 
-/* line 108, ../../Sync/Portfolio/scss/style.scss */
+/* line 118, ../../Sync/Portfolio/scss/style.scss */
 .front {
   z-index: 99999;
 }
 
-/* line 112, ../../Sync/Portfolio/scss/style.scss */
+/* line 122, ../../Sync/Portfolio/scss/style.scss */
 .title {
   width: 300px;
   display: block;
@@ -126,7 +135,7 @@ html {
   }
 }
 
-/* line 124, ../../Sync/Portfolio/scss/style.scss */
+/* line 134, ../../Sync/Portfolio/scss/style.scss */
 .subtitle {
   font-family: 'Roboto';
   font-size: 20px;
@@ -137,7 +146,7 @@ html {
   animation: subtitle 1.4s 1s forwards;
 }
 
-/* line 134, ../../Sync/Portfolio/scss/style.scss */
+/* line 144, ../../Sync/Portfolio/scss/style.scss */
 .seework {
   background: transparent linear-gradient(112deg, #7195F5 0%, #C397F4 100%) 0% 0% no-repeat padding-box;
   box-shadow: 0px 0px 5px #000000B8;
@@ -148,18 +157,18 @@ html {
   display: flex;
 }
 
-/* line 143, ../../Sync/Portfolio/scss/style.scss */
+/* line 153, ../../Sync/Portfolio/scss/style.scss */
 .seework:hover i {
   transform: translate(33px, 0px);
 }
 
-/* line 147, ../../Sync/Portfolio/scss/style.scss */
+/* line 157, ../../Sync/Portfolio/scss/style.scss */
 .seework:hover i span {
   width: 57px;
   right: 24px;
 }
 
-/* line 152, ../../Sync/Portfolio/scss/style.scss */
+/* line 162, ../../Sync/Portfolio/scss/style.scss */
 .seework i {
   margin: auto;
   text-align: center;
@@ -169,7 +178,7 @@ html {
   color: #FEB57E;
 }
 
-/* line 160, ../../Sync/Portfolio/scss/style.scss */
+/* line 170, ../../Sync/Portfolio/scss/style.scss */
 .seework i span {
   overflow: hidden;
   width: 0.1px;
@@ -186,7 +195,7 @@ html {
   user-select: none;
 }
 
-/* line 178, ../../Sync/Portfolio/scss/style.scss */
+/* line 188, ../../Sync/Portfolio/scss/style.scss */
 #jellyfish {
   top: 300px;
   right: 0;
@@ -199,74 +208,74 @@ html {
   z-index: 0;
 }
 
-/* line 190, ../../Sync/Portfolio/scss/style.scss */
+/* line 200, ../../Sync/Portfolio/scss/style.scss */
 #title {
   height: 52px;
   top: -50px;
 }
 
-/* line 195, ../../Sync/Portfolio/scss/style.scss */
+/* line 205, ../../Sync/Portfolio/scss/style.scss */
 .letter {
   stroke: #fcf164;
 }
 
-/* line 199, ../../Sync/Portfolio/scss/style.scss */
+/* line 209, ../../Sync/Portfolio/scss/style.scss */
 .letter:nth-child(2) {
   stroke-dasharray: 160px;
   stroke-dashoffset: 160px;
   animation: title 0.75s ease-out 0s 1 forwards;
 }
 
-/* line 206, ../../Sync/Portfolio/scss/style.scss */
+/* line 216, ../../Sync/Portfolio/scss/style.scss */
 .letter:nth-child(3) {
   stroke-dasharray: 72px;
   stroke-dashoffset: 72px;
   animation: title 0.75s ease-out 0.2s 1 forwards;
 }
 
-/* line 212, ../../Sync/Portfolio/scss/style.scss */
+/* line 222, ../../Sync/Portfolio/scss/style.scss */
 .letter:nth-child(4) {
   stroke-dasharray: 150px;
   stroke-dashoffset: 150px;
   animation: title 0.75s ease-out 0.4s 1 forwards;
 }
 
-/* line 218, ../../Sync/Portfolio/scss/style.scss */
+/* line 228, ../../Sync/Portfolio/scss/style.scss */
 .letter:nth-child(5) {
   stroke-dasharray: 62px;
   stroke-dashoffset: 62px;
   animation: title 0.75s ease-out 0.6s 1 forwards;
 }
 
-/* line 225, ../../Sync/Portfolio/scss/style.scss */
+/* line 235, ../../Sync/Portfolio/scss/style.scss */
 .letter:nth-child(6) {
   stroke-dasharray: 101px;
   stroke-dashoffset: 101px;
   animation: title 0.75s ease-out 0.8s 1 forwards;
 }
 
-/* line 231, ../../Sync/Portfolio/scss/style.scss */
+/* line 241, ../../Sync/Portfolio/scss/style.scss */
 .letter:nth-child(7) {
   stroke-dasharray: 163px;
   stroke-dashoffset: 163px;
   animation: title 0.75s ease-out 1s 1 forwards;
 }
 
-/* line 237, ../../Sync/Portfolio/scss/style.scss */
+/* line 247, ../../Sync/Portfolio/scss/style.scss */
 .letter:nth-child(8) {
   stroke-dasharray: 70px;
   stroke-dashoffset: 70px;
   animation: title 0.75s ease-out 1.2s 1 forwards;
 }
 
-/* line 243, ../../Sync/Portfolio/scss/style.scss */
+/* line 253, ../../Sync/Portfolio/scss/style.scss */
 .letter:nth-child(9) {
   stroke-dasharray: 72px;
   stroke-dashoffset: 72px;
   animation: title 0.75s ease-out 1.4s 1 forwards;
 }
 
-/* line 249, ../../Sync/Portfolio/scss/style.scss */
+/* line 259, ../../Sync/Portfolio/scss/style.scss */
 .letter:nth-child(10) {
   stroke-dasharray: 72px;
   stroke-dashoffset: 72px;
