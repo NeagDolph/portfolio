@@ -8,9 +8,13 @@ body {
 
 @media (max-width: 600px) {
     .header img {
-      margin: 0 10px !important;
+        margin: 0 10px !important;
     }
-  }
+
+    .section2 {
+        background: transparent linear-gradient(180deg, #040507 0%, #000000 11%, #000000 100%) !important;
+    }
+}
 
 html {
     scroll-behavior: smooth;
@@ -18,20 +22,28 @@ html {
     overflow-y: auto;
 }
 
+cos {
+    font-size: 5em;
+    color: lightgreen;
+    font-weight: bold;
+
+}
+
 .vis {
     opacity: 1 !important;
+    background: url("../codeimage.png") center / contain no-repeat;
 }
 
 #code {
     opacity: 0;
     top: -46px;
     left: 2w;
-    width: 604px;
+    width: 470px;
     height: 105vh;
     transition: opacity 1s ease-out;
     // background: transparent url('../codeimage.png') 0% 0% no-repeat padding-box;
-    background-size: contain;
-    background-repeat: no-repeat;
+    // background-size: contain;
+    // background-repeat: no-repeat;
     position: absolute;
     max-width: 99vw;
 }
