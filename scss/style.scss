@@ -96,6 +96,7 @@ html {
     height: 2000px;
     position: absolute;
     width: 100%;
+    overflow: hidden;
     top: 99vh;
     background: transparent linear-gradient(180deg, #090a0e 0%, #000000 11%, #000000 100%);
 
@@ -105,6 +106,10 @@ html {
 
     .firstset {
         margin-top: 300px;
+        width: 100%;
+        max-width: 100vw;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
