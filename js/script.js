@@ -46,7 +46,7 @@ function maxat(e, num) {
 }
 
 $(".seework").click(function() {
-    document.body.scrollTop = $(".section2")[0].offsetTop + 230;
+    $(window).scrollTop($(".section2")[0].offsetTop + 230);
 })
 
 $(".header img").click(function() {
