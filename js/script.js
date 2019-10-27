@@ -20,8 +20,7 @@ $(document).ready(function() {
 
     $('<img/>').attr('src', '../codeimage.png').on('load', function() {
         $(this).remove();
-        if (isMobile) $('#code').css('background', 'linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../codeimage.png") center / contain no-repeat').addClass("vis");
-        if (!isMobile) $('#code').addClass("vis");
+        $('#code').addClass("vis");
     });
 
     var rellax = new Rellax('#code');
