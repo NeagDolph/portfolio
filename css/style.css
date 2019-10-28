@@ -136,7 +136,7 @@ cos {
 
 /* line 135, ../../Sync/Portfolio/scss/style.scss */
 .section2 .firstset {
-  margin-top: 300px;
+  margin-top: 200px;
   width: 100%;
   max-width: 100vw;
   margin-left: 0;
@@ -230,19 +230,6 @@ cos {
   font-weight: 300;
   color: #FEB57E;
   user-select: none;
-}
-
-/* line 224, ../../Sync/Portfolio/scss/style.scss */
-#jellyfish {
-  top: 300px;
-  right: 0;
-  width: 944.16667px;
-  height: 828.333333px;
-  background: transparent url("../jellyfish.png");
-  opacity: 0.3;
-  background-size: cover;
-  position: absolute;
-  z-index: 0;
 }
 
 /* line 236, ../../Sync/Portfolio/scss/style.scss */

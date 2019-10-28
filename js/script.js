@@ -34,12 +34,11 @@ $(".contact-button").hover(function() {}, function() {
 document.addEventListener('scroll', function (event) {
     let offsettop = $(window).scrollTop()
     relscrol = ((offsettop / 200) > 1 ? 1 : (offsettop / 200))
-    modscrol = (offsettop - ($(".section2")[0].offsetTop - 1800)) / 2000;
-    relscrol1 = modscrol > 1 ? 1 : modscrol
+
+
     // $(".header").css("background", "rgba(255, 255, 255, " + (relscrol - 0.4) + ")")
     // $(".header").css("box-shadow", "0px 10px 14px rgba(0, 0, 0, " + (relscrol - 0.2) + ")")
     $(".header img").css("transform", "translate(0, " + (-(relscrol * 50)) + "px)")
-    $("#jellyfish").css({"opacity": relscrol1 - 0.65})
 
     if (offsettop < 218) {
         $(".header img").css("pointer-events", "none")
@@ -53,7 +52,7 @@ function maxat(e, num) {
 }
 
 $(".seework").click(function() {
-    $(window).scrollTop($(".section2")[0].offsetTop + 230);
+    $(window).scrollTop($(".section2")[0].offsetTop + 100);
 })
 
 $(".header img").click(function() {
