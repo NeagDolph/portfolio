@@ -4,6 +4,7 @@ var currentblob = document.body;
 var currentblobi;
 var preblob;
 var scaleconst = 2000;
+var noscroll = false;
 
 function getxy(e) {
   var style = window.getComputedStyle(e);
@@ -35,7 +36,6 @@ class Blob {
         this.init();
     }
     init() {
-        console.log("BIATCXH")
         this.rect = this.DOM.el.getBoundingClientRect();
         this.layers = Array.from(this.DOM.el.querySelectorAll('path'), t => {
             
@@ -54,7 +54,6 @@ class Blob {
     }
     intro(a, b, c, d) {
         anime.remove(this.layers);
-        console.table("EEP", this.DOM.el, currentblob, currentblobi, $(".scene").index(this.DOM.el))
         if (this.DOM.el.classList[0] == $(currentblob).attr("class")) {
             b = [0, 1.2]
             preblob = currentblob
@@ -139,38 +138,52 @@ $(".scene g").hover(function() {
     currentblob = elem[0]
     currentblobi = $(".scene").index($(this))
     if (!spawned) return;
-	console.log(elem)
 	blobyy = new Blob(elem[0], [true]);
 	blobyy.enlargen()
 },function() {
     currentblob = document.body
     // if (!spawned) return;
     ele = $(this)
-	console.log(ele)
 	blobyy = new Blob(ele[0], [true]);
 	blobyy.delargen()
 })
 
 $(window).scroll(() => {
     let scrolltop = $(window).scrollTop()
+    sceneoffset = $(".topography").offset().top
 
-    if (scrolltop > 550) {
+
+    if (scrolltop > sceneoffset) {
+        $(".topography").removeClass("blind")
+        $(".scene").css("position", "fixed")
         if (spawned) return;
         spawned = true;
-        setTimeout(() => {
-            Array.from(DOM.svg.querySelectorAll('g')).forEach((el) => {
-                const blob = new Blob(el);
-                blobs.push(blob);
-                blob.intro(1200, [0.2, 1], [0,0.5], 600);
-            });
-            document.body.classList.add('render')
-        }, 60);
+        Array.from(DOM.svg.querySelectorAll('g')).forEach((el) => {
+            const blob = new Blob(el);
+            blobs.push(blob);
+            blob.intro(1200, [0.2, 1], [0,0.5], 600);
+        });
+        $(".topography").addClass('render')
     } else {
-        if (!spawned) return;
-        spawned = false;
-        setTimeout(() => {
-            document.body.classList.remove('render')
-            canhover = false;
-        }, 60);
+        if (!$(".topography").hasClass("blind")) $(".topography").addClass("blind")
+        $(".scene").css("position", "relative")
+        // noscroll = true;
+        // if (!spawned) return;
+        // spawned = false;
+        // setTimeout(() => {
+        //     $(".topography").removeClass('render')
+        //     canhover = false;
+        // }, 60);
+        // setTimeout(() => {
+        //     noscroll = false;
+        // }, 300);
     }
-})
+});
+
+$('body').on('scroll mousewheel touchmove', function(e) {
+    if (noscroll) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+    }
+});

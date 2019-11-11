@@ -52,7 +52,7 @@ function maxat(e, num) {
 }
 
 $(".seework").click(function() {
-    $(window).scrollTop($(".section2")[0].offsetTop + 100);
+    $(window).scrollTop($(".section2")[0].offsetTop + 180);
 })
 
 $(".header img").click(function() {
