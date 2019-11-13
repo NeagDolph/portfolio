@@ -161,7 +161,7 @@ $(window).scroll(() => {
         Array.from(DOM.svg.querySelectorAll('g')).forEach((el) => {
             const blob = new Blob(el);
             blobs.push(blob);
-            blob.intro(1200, [0.2, 1], [0,0.5], 600);
+            blob.intro(1200, [0.2, 1], [0,1], 600);
         });
         $(".topography").addClass('render')
     } else {
