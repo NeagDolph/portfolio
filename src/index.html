@@ -3,14 +3,14 @@
     <title>LemonTree - Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Description" content="Portfolio for LemonTree web developer. An excited coder with cool projects to show.">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-    <link href="css/contact.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="css/topography.css" />
+    <link href="./scss/style.scss" rel="stylesheet" type="text/css">
+    <link href="./scss/contact.scss" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../css/topography.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
-    <script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+    <script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this site in a modern browser that supports CSS Variables.");</script>
 </head>
 <body>
 <!-- Background items -->
@@ -27,7 +27,7 @@
     <div class="row">
         <div class="col-12">
             <div class="header position-fixed front">
-                <img class="mx-auto d-block position-relative" src="../logo.png" width="70px" style="pointer-events: none;" alt="logo">
+                <img class="mx-auto d-block position-relative" src="./assets/logos/logo.png" width="70px" style="pointer-events: none;" alt="logo">
             </div>
 
             <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -37,7 +37,7 @@
                     </symbol>
                 </defs>
             </svg>
-            
+
             <span class="contact-button" id="copyemail" data-clipboard-text="hi@lemontree.dev">
                 hi@lemontree.dev
                 <span>hi@lemontree.dev</span>
@@ -86,7 +86,7 @@
                 <div class="rippleJS b"></div>
             </div>
         </div>
-        
+
     </div>
 
 
@@ -180,7 +180,7 @@
                     </svg>
                 </div>
         <!-- <div id="jellyfish"></div> -->
-        
+
         <!-- <div class="row justify-content-center front firstset">
             <div class="col-md-4 col-lg-4 col-xl-3 col-sm-8 col-xs-10 mb-5">
                 <div class="card m-2 position-relative">
@@ -189,7 +189,7 @@
                         <h4 class="card-title">THREE.js game</h4>
 
                         <p class="card-text">This is a game I made back in 2018 in THREE.js using Cannon.js for physics. You will need a snappy computer to run this program so beware.</p>
-                    
+
                         <a href="https://three.lemontree.dev" target="_blank" class="btn btn-secondary stretched-link">Open</a>
                     </div>
                 </div>
@@ -202,7 +202,7 @@
                         <h4 class="card-title">Openworldia</h4>
 
                         <p class="card-text">A game I developed this in early 2019 with help from my friends for the assets and story. This was one of the most fun projects ever for me and a big learning experience.</p>
-                    
+
                         <a href="https://openworldia.lemontree.dev" target="_blank" class="btn btn-secondary stretched-link">Open</a>
                     </div>
                 </div>
@@ -214,7 +214,7 @@
                         <h4 class="card-title">THREE.js game</h4>
 
                         <p class="card-text">This is a game I made back in 2018 in THREE.js using Cannon.js for physics. You will need a snappy computer to run this program so beware.</p>
-                    
+
                         <a href="https://three.lemontree.dev" target="_blank" class="btn btn-secondary stretched-link">Open</a>
                     </div>
                 </div>
@@ -233,7 +233,7 @@
 
     <!-- Ripple library -->
     <script async src="https://cdn.jsdelivr.net/npm/vanilla-ripplejs@1.0.6" integrity="sha384-OlarGErerEgz/M7123pQTTek4pUIiR6t0BK09bTmWDi2cZYbv3VHrriaXDnA0Oup" crossorigin="anonymous"></script>
-    
+
     <!-- Clipboardjs -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
 
@@ -242,17 +242,17 @@
 
     <!-- PopperJS -->
     <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
-    
+
     <!-- Bootstrap -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <!-- Anime.js -->
-    <script src="js/anime.min.js"></script>
-    
+    <script src="./js/anime.min.js"></script>
+
     <!-- Gradient Topography script -->
-    <script src="js/topography.js"></script>
+    <script src="./js/topography.js"></script>
 
     <!-- Script -->
-    <script src="js/script.js"></script>
+    <script src="./js/script.js" type="module"></script>
 </body>
 </html>

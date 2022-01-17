@@ -1,0 +1,34 @@
+{
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/index.html",
+  "targets": {
+    "default": {
+      "distDir": "./public"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build --out-dir public",
+    "start": "parcel"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NeagDolph/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NeagDolph/portfolio/issues"
+  },
+  "homepage": "https://github.com/NeagDolph/portfolio#readme",
+  "dependencies": {
+    "firebase": "^9.6.3"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.2.1",
+    "parcel": "^2.2.1"
+  }
+}
